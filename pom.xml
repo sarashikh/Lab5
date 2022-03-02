@@ -15,8 +15,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <properties>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+<!--        <maven.compiler.source>15</maven.compiler.source>-->
+<!--        <maven.compiler.target>15</maven.compiler.target>-->
     </properties>
     <dependencies>
         <dependency>
