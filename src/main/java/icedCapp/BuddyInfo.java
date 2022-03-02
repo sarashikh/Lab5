@@ -12,12 +12,13 @@ public class BuddyInfo {
     private String name;
     private int age;
     private String phoneNumber;
+    private String address;
 
-
-    public BuddyInfo(String name, int age, String phoneNumber) {
+    public BuddyInfo(String name, int age, String phoneNumber, String address) {
         this.name = name;
         this.age = age;
         this.phoneNumber = phoneNumber;
+        this.address= address;
     }
 
     public BuddyInfo(){ }
@@ -58,4 +59,11 @@ public class BuddyInfo {
         return "Name: " + this.name + ", Age: " + this.age + ", PhoneNumber:  " + this.phoneNumber;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }

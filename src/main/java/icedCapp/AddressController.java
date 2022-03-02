@@ -19,8 +19,8 @@ public class AddressController {
     private BuddyInfoRepository buddyInfoRepository;
 
     @PostMapping("/addBuddy")
-    public AddressBook buddy(@RequestParam(name="name") String name,@RequestParam (name ="age")int age,@RequestParam(name="number")String phoneNumber, @RequestParam(name="id") Long id) { // if no name value then it will say world
-        BuddyInfo b = new BuddyInfo(name, age, phoneNumber);
+    public AddressBook buddy(@RequestParam(name="name") String name,@RequestParam (name ="age")int age,@RequestParam(name="number")String phoneNumber, @RequestParam(name="id") Long id, @RequestParam(name="address") String address) { // if no name value then it will say world
+        BuddyInfo b = new BuddyInfo(name, age, phoneNumber, address);
         Optional<AddressBook> a = addressBookRepository.findById(id); //optional: candy wrapper w addressBook as candy
         if(a.isPresent()){ // check the candy (if theres candy)
             AddressBook candy = a.get();
