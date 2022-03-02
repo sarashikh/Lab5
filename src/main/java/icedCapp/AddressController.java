@@ -21,7 +21,6 @@ public class AddressController {
     @PostMapping("/addBuddy")
     public AddressBook buddy(@RequestParam(name="name") String name,@RequestParam (name ="age")int age,@RequestParam(name="number")String phoneNumber, @RequestParam(name="id") Long id) { // if no name value then it will say world
         BuddyInfo b = new BuddyInfo(name, age, phoneNumber);
-//        addressBookRepository.findById(id); //adding the buddy to the addressbook by candy wrapper
         Optional<AddressBook> a = addressBookRepository.findById(id); //optional: candy wrapper w addressBook as candy
         if(a.isPresent()){ // check the candy (if theres candy)
             AddressBook candy = a.get();
